@@ -1,0 +1,109 @@
+/* Sidebar */
+.sidebar {
+  width: 280px;
+  background: linear-gradient(180deg, #5c9ecd, #4682b4);
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+  border-right: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Profil */
+.profile {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-bottom: 0.75rem;
+}
+
+.profile h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.profile .title {
+  font-size: 1rem;
+  color: #ffd700;
+}
+
+/* Menü */
+.sidebar-nav ul,
+.other-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li,
+.other-links li {
+  margin: 0.5rem 0;
+}
+
+/* Linkler */
+.sidebar-nav a,
+.other-links a {
+  display: block;
+  position: relative; /* pseudo-element için referans */
+  z-index: 1;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Kayma efekti arka plan – pseudo element */
+.sidebar-nav a::before,
+.other-links a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transition: left 0.3s ease;
+  z-index: -1; /* yazının altında */
+}
+
+/* Hover olduğunda kayan arka plan */
+.sidebar-nav a:hover::before,
+.other-links a:hover::before {
+  left: 0;
+}
+
+/* Hover – yazı rengi ve hafif sağa kayma */
+.sidebar-nav a:hover,
+.other-links a:hover {
+  color: #ffd700;
+  transform: translateX(5px);
+}
+
+/* Aktif link */
+.sidebar-nav a.active {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #ffd700;
+}
+
+/* Alt kısım */
+.copy {
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}

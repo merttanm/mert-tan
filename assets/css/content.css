@@ -1,0 +1,6 @@
+.content {
+    flex: 1;
+    overflow-y: auto;
+    background: #5c9ecd;
+    padding: 2rem;
+}
