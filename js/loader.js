@@ -1,10 +1,10 @@
 console.log("Loader.js çalışıyor!");
 
-// sağ için component listesi
+// Sağ için component listesi
 const rightComponents = ['about', 'projects', 'experience', 'contact'];
 
-// sol için component listesi
-const leftComponents = ['sidebar', 'menu']; // mesela components/sidebar.html vs.
+// Sol için component listesi
+const leftComponents = ['sidebar', 'menu']; // components/sidebar.html vs.
 
 // Sağ yükleme fonksiyonu
 async function loadComponent(name, targetId) {
@@ -12,10 +12,10 @@ async function loadComponent(name, targetId) {
         const response = await fetch(`components/${name}.html`);
         if (!response.ok) throw new Error(`Component bulunamadı: ${name}`);
         const html = await response.text();
-        const container = document.createElement('div');
-        container.id = name;
-        container.innerHTML = html;
-        document.getElementById(targetId).appendChild(container);
+
+        // Eski container ekleme yerine direkt HTML ekliyoruz
+        document.getElementById(targetId).insertAdjacentHTML('beforeend', html);
+
         console.log(`${name} yüklendi → ${targetId}`);
     } catch (err) {
         console.error(err);

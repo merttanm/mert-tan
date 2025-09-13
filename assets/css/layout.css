@@ -1,7 +1,35 @@
+/* Layout flex ayarı */
 .layout {
     display: flex;
-    height: 100vh;
+    flex-direction: row;
 }
 
+/* Sidebar sabit genişlik ve sabit pozisyon */
+.sidebar {
+    width: 280px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, #5c9ecd, #4682b4);
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-right: 2px solid rgba(255, 255, 255, 0.1);
+    overflow-y: auto;
+}
 
-
+/* Sağ content sidebar yanında */
+.content {
+    margin-left: 280px; /* Sidebar genişliği kadar boşluk */
+    padding: 2rem;
+    flex: 1;
+    min-height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+.content > div {
+    padding: 2rem 0;
+    scroll-margin-top: 20px; /* üstteki boşluk için */
+}
