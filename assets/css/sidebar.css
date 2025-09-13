@@ -13,7 +13,7 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #fff;
   border-right: 2px solid rgba(255, 255, 255, 0.1);
-  
+
   /* Gölge ekledik */
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.15);
 }
@@ -28,8 +28,10 @@
 }
 
 .profile {
-  text-align: left; /* solda hizala */
-  padding: 2rem 1rem; /* padding ile sidebar-nav ile aynı hiza */
+  text-align: left;
+  /* solda hizala */
+  padding: 2rem 1rem;
+  /* padding ile sidebar-nav ile aynı hiza */
   background: linear-gradient(135deg, #4a90e2, #50e3c2);
   border-radius: 20px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
@@ -41,7 +43,8 @@
 /* Avatar solda hizalanacak */
 .profile .avatar {
   display: block;
-  margin: 0 0 1rem 0; /* üstten 0, alttan 1rem, solda 0 */
+  margin: 0 0 1rem 0;
+  /* üstten 0, alttan 1rem, solda 0 */
 }
 
 /* İsim ve title de sola hizalı */
@@ -68,6 +71,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-top: 30px;
 }
 
 .sidebar-nav li,
@@ -79,7 +83,8 @@
 .sidebar-nav a,
 .other-links a {
   display: block;
-  position: relative; /* pseudo-element için referans */
+  position: relative;
+  /* pseudo-element için referans */
   z-index: 1;
   color: #fff;
   text-decoration: none;
@@ -101,7 +106,8 @@
   height: 100%;
   background: rgba(255, 255, 255, 0.15);
   transition: left 0.3s ease;
-  z-index: -1; /* yazının altında */
+  z-index: -1;
+  /* yazının altında */
 }
 
 /* Hover olduğunda kayan arka plan */
