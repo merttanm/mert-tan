@@ -16,20 +16,25 @@
 
 <body>
     <div class="layout">
-        <!-- Sol sidebar sadece bir container -->
-        <aside class="sidebar">
-            <nav class="nav" id="left-root">
-                <!-- JS ile nav linkleri buraya gelecek -->
-            </nav>
-        </aside>
-
+        <!-- Sidebar ve üstüne taşan kutucuklar -->
+        <div class="sidebar-stack">
+            <aside class="sidebar">
+                <nav class="nav" id="left-root">
+                    <!-- JS ile nav linkleri buraya gelecek -->
+                </nav>
+            </aside>
+            <!-- Sidebar'ın üstüne taşan kutucuklar -->
+            <div class="floating-sections">
+                <div id="about" class="component-section"></div>
+                <div id="projects" class="component-section"></div>
+                <div id="experience" class="component-section"></div>
+                <div id="contact" class="component-section"></div>
+            </div>
+        </div>
+        
         <!-- Sağ taraf scrollable ve JS ile yüklenecek -->
-        <main class="content" id="right-root">
-            <div id="about" class="component-section"></div>
-            <div id="projects" class="component-section"></div>
-            <div id="experience" class="component-section"></div>
-            <div id="contact" class="component-section"></div>
-
+          <main class="content" id="right-root">
+           
         </main>
     </div>
     <script src="js/loader.js"></script>

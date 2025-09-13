@@ -1,14 +1,38 @@
+/* İçerik alanı – sidebar’dan sonra başlar */
 .content {
-    flex: 1;
+    margin-left: 10px;
+    /* sidebar genişliği kadar boşluk bırak */
     overflow-y: auto;
-    background: #5c9ecd;
-    padding: 2rem;
+    /* ekranın en sag alanıda ki kısa alan  */
+    background: linear-gradient(135deg, #4a90e2, #39a28b);
+
+    min-height: 100vh;
+    /* tam yükseklik */
+    box-sizing: border-box;
+    z-index: 20;
 }
 
+/* Content içindeki kutular */
 .component-section {
-    padding: 2rem;
-    margin-bottom: 2rem; /* bölümler arası boşluk */
-    background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 9999;
+
+  width: calc(100vw - 380px);
+  margin-top: 40px; /* her kutunun üstünde boşluk */
+  margin-left: 380px;
+
+  padding: 2rem;
+  margin-bottom: 0;
+  background: linear-gradient(135deg, #1d78e0, #70dac3);
+  border-radius: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
+.component-section:first-child {
+  margin-top: 120px; /* ilk kutu profile kutusunun altından başlasın */
+}
+
+.component-section:first-child {
+  margin-top: 200px;
+}
+
