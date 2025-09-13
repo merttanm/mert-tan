@@ -4,3 +4,11 @@
     background: #5c9ecd;
     padding: 2rem;
 }
+
+.component-section {
+    padding: 2rem;
+    margin-bottom: 2rem; /* bölümler arası boşluk */
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
