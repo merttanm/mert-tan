@@ -1,7 +1,7 @@
 console.log("Loader.js çalışıyor!");
 
 // Sağ için component listesi (her biri ayrı div id olacak)
-const rightComponents = ['about', 'projects', 'experience', 'contact', 'blog'];
+const rightComponents = ['about', 'projects', 'experience', 'contact'];
 
 // Sol için component listesi
 const leftComponents = ['sidebar' ]; // componßents/sidebar.html vs.
