@@ -1,52 +1,81 @@
+/* Experience accordion başlıkları için tıklanabilir ve aktif stil */
+.exp-toggle {
+  cursor: pointer;
+  background: linear-gradient(90deg, #4a90e2 0%, #50e3c2 100%);
+  color: #fff;
+  padding: 0.7em 1em;
+  border-radius: 8px;
+  margin-bottom: 6px;
+  transition: background 0.2s, color 0.2s;
+  user-select: none;
+  position: relative;
+}
+.exp-toggle:hover {
+  background: linear-gradient(90deg, #50e3c2 0%, #4a90e2 100%);
+  color: #ffd700;
+}
+.exp-toggle.active {
+  background: #ffd700;
+  color: #222;
+}
+.exp-details {
+  margin-bottom: 18px;
+}
 /* İçerik alanı – sidebar’dan sonra başlar */
 .content {
-  margin-left: 6%; 
-  overflow-y: auto;
-  min-height: 100dvh;  
+  margin-left: 6%;
+  overflow-y: visible;
+  min-height: calc(100vh - 0px);
   box-sizing: border-box;
   z-index: 20;
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .content {
     margin-left: 0;
-    width: 100%;
+    width: 100vw;
     min-height: auto;
     padding: 0 0.5rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
 }
 
 /* Content içindeki kutular */
 .component-section {
   position: relative;
-  z-index: 9999;    
-  width: 80%;          
-  margin-top: 20px;    
-  margin-left: 350px;   
-  padding: 2rem;
-  margin-bottom: 0.1rem;
+  z-index: 9999;
+  width: 80%;
+  margin-top: 32px;
+  margin-left: 350px;
+  padding: 2rem 0 2rem 0;
+  margin-bottom: 0;
   background: linear-gradient(135deg, #1d78e0, #70dac3);
   border-radius: 15px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .component-section {
     width: 100%;
     margin-left: 0;
-    padding: 0.7rem 0.3rem;
-    font-size: 0.98rem;
+    padding: 0.45rem 0.12rem;
+    font-size: 0.97rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
   .component-section h2 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
   .component-section p {
-    font-size: 0.98rem;
+    font-size: 0.97rem;
   }
 }
 
 .component-section:first-child {
-  margin-top: 120px;
+  margin-top: 64px;
 }
 
 @media (max-width: 768px) {

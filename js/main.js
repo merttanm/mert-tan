@@ -1,3 +1,24 @@
+// Experience accordion: h3'e tıklayınca detayları aç/kapat (dinamik yükleme için fonksiyon)
+function enableExperienceAccordion() {
+    document.querySelectorAll('.exp-toggle').forEach(function(h3) {
+        h3.onclick = function() {
+            const details = h3.nextElementSibling;
+            if (!details) return;
+            const isOpen = details.style.display === 'block';
+            // Tüm başlıklardan active class'ı kaldır
+            document.querySelectorAll('.exp-toggle').forEach(el => el.classList.remove('active'));
+            // Tüm detayları kapat
+            document.querySelectorAll('.exp-details').forEach(el => el.style.display = 'none');
+            if (!isOpen) {
+                details.style.display = 'block';
+                h3.classList.add('active');
+            }
+        };
+    });
+}
+// İlk yüklemede ve her component yüklemesinden sonra çağır
+window.enableExperienceAccordion = enableExperienceAccordion;
+setTimeout(enableExperienceAccordion, 500);
 // Profil ikonlarına tıklanınca link açılmazsa uyarı göster (event delegation)
 document.querySelector('.sidebar')?.addEventListener('click', function(e) {
     const link = e.target.closest('.icon-link');

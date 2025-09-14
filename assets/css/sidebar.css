@@ -6,6 +6,7 @@
   gap: 16px;
   justify-content: flex-end;
 }
+
 .profile-icons-col {
   display: flex;
   flex-direction: column;
@@ -13,41 +14,50 @@
   align-items: center;
   justify-content: center;
 }
+
 .profile-icons-col .icon-link img {
-  width: 26px;
-  height: 26px;
-  opacity: 0.85;
-  transition: opacity 0.2s, filter 0.2s;
-  border-radius: 5px;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px 0 rgba(31, 38, 135, 0.10);
+  transition: transform 0.2s, opacity 0.2s, filter 0.2s;
 }
+
 .profile-icons-col .icon-link:hover img {
   opacity: 1;
-  filter: brightness(1.2) drop-shadow(0 0 2px #ffd700);
+  filter: brightness(1.2) drop-shadow(0 0 4px #ffd700);
+  transform: scale(1.13) rotate(-6deg);
 }
+
 .profile-info h1 {
   margin: 0 0 4px 0;
   font-size: 2.1rem;
   text-align: right;
 }
+
 .profile-info .title {
   font-size: 1rem;
-  color: rgba(255,255,255,0.9);
+  color: rgba(255, 255, 255, 0.9);
   text-align: left;
 }
+
 @media (max-width: 768px) {
   .profile-flex {
     gap: 10px;
     justify-content: flex-end;
   }
+
   .profile-info h1 {
     font-size: 1.2rem;
     text-align: right;
   }
+
   .profile-info .title {
     font-size: 0.95rem;
     text-align: left;
   }
 }
+
 /* Profildeki küçük ikonlar satırı */
 .profile-icons-row {
   display: flex;
@@ -58,6 +68,7 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .profile-icons-row .icon-link img {
   width: 26px;
   height: 26px;
@@ -65,16 +76,19 @@
   transition: opacity 0.2s, filter 0.2s;
   border-radius: 5px;
 }
+
 .profile-icons-row .icon-link:hover img {
   opacity: 1;
   filter: brightness(1.2) drop-shadow(0 0 2px #ffd700);
 }
+
 @media (max-width: 768px) {
   .profile-icons-row {
     justify-content: center;
     gap: 16px;
   }
 }
+
 /* Sidebar sabit */
 .sidebar {
   width: clamp(220px, 25%, 380px);
@@ -88,9 +102,10 @@
   height: 100vh;
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: #222;
   border-right: 2px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+
   z-index: 10;
   /* üstte */
 }
@@ -102,22 +117,26 @@
     width: 100%;
     height: auto;
     border-right: none;
-    border-bottom: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
     padding: 1rem 0.5rem;
     z-index: 100;
   }
+
   .profile {
     padding: 1rem 0.5rem;
     margin-right: 0 !important;
     text-align: center;
   }
+
   .profile h1 {
     font-size: 1.3rem;
   }
+
   .profile .title {
     font-size: 0.95rem;
   }
+
   .sidebar-nav ul,
   .other-links {
     margin-top: 10px;
@@ -143,7 +162,8 @@
   color: #fff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   transition: transform 0.3s ease;
-  margin-inline-end: 69px; /* sağdan boşluk, RTL dillerde de uyumlu */
+  margin-inline-end: 69px;
+  /* sağdan boşluk, RTL dillerde de uyumlu */
 }
 
 /* Avatar solda hizalanacak */
@@ -225,14 +245,15 @@
 /* Hover – yazı rengi ve hafif sağa kayma */
 .sidebar-nav a:hover,
 .other-links a:hover {
-  color: #ffd700;
+  color: #174ea6;
   transform: translateX(5px);
 }
 
 /* Aktif link */
 .sidebar-nav a.active {
-  background-color: rgba(255, 255, 255, 0.25);
-  color: #ffd700;
+  background: #174ea6;
+  color: #fff;
+
 }
 
 /* Alt kısım */
@@ -242,8 +263,3 @@
   font-size: 0.9rem;
   opacity: 0.8;
 }
-
-/* 
-* {
-  outline: 1px solid red;
-}*/

@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #c9cbd5;
+    background-color: #3f8bbd;
     color: white;
     padding: 2% 0;
     text-align: center;
@@ -29,17 +29,17 @@
 }
 
 
-.header h1 {
-    font-size: clamp(1.5rem, 5vw, 2rem);
-    margin: 0;
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #3f8bbd 0%, #4a90e2 100%);
+    color: white;
+    padding: 1.2em 0.2em;
+    text-align: center;
+    z-index: 1000;
+    transition: background 0.3s, box-shadow 0.3s;
 }
-
-.header p {
-    font-size: 1rem;
-    color: #e04848;
-    margin: 5px 0 10px 0;
-}
-
 .header .nav {
     display: flex;
     justify-content: center;
