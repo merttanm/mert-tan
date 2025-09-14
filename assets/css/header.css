@@ -4,7 +4,7 @@
     width: 100%;
     background-color: #c9cbd5;
     color: white;
-    padding: 20px 0;
+    padding: 2% 0;
     text-align: center;
     z-index: 1000;
     transition: background 0.3s, box-shadow 0.3s;
@@ -16,8 +16,10 @@
 }
 
 .header .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 15%;
+    /* contaÏiner genişliğinin %15’i */
+    height: auto;
+    /* orantılı */
     /* kare */
     border-radius: 10px;
     /* hafif oval köşeler */
@@ -42,7 +44,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 2%; 
 }
 
 .header .nav a {
