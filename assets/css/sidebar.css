@@ -1,3 +1,80 @@
+/* Profilde ikonlar dikey, yazı sağda */
+.profile-flex {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-end;
+}
+.profile-icons-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.profile-icons-col .icon-link img {
+  width: 26px;
+  height: 26px;
+  opacity: 0.85;
+  transition: opacity 0.2s, filter 0.2s;
+  border-radius: 5px;
+}
+.profile-icons-col .icon-link:hover img {
+  opacity: 1;
+  filter: brightness(1.2) drop-shadow(0 0 2px #ffd700);
+}
+.profile-info h1 {
+  margin: 0 0 4px 0;
+  font-size: 2.1rem;
+  text-align: right;
+}
+.profile-info .title {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .profile-flex {
+    gap: 10px;
+    justify-content: flex-end;
+  }
+  .profile-info h1 {
+    font-size: 1.2rem;
+    text-align: right;
+  }
+  .profile-info .title {
+    font-size: 0.95rem;
+    text-align: left;
+  }
+}
+/* Profildeki küçük ikonlar satırı */
+.profile-icons-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 8px;
+  margin-bottom: 0;
+  justify-content: flex-start;
+  align-items: center;
+}
+.profile-icons-row .icon-link img {
+  width: 26px;
+  height: 26px;
+  opacity: 0.85;
+  transition: opacity 0.2s, filter 0.2s;
+  border-radius: 5px;
+}
+.profile-icons-row .icon-link:hover img {
+  opacity: 1;
+  filter: brightness(1.2) drop-shadow(0 0 2px #ffd700);
+}
+@media (max-width: 768px) {
+  .profile-icons-row {
+    justify-content: center;
+    gap: 16px;
+  }
+}
 /* Sidebar sabit */
 .sidebar {
   width: clamp(220px, 25%, 380px);

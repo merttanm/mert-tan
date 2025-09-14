@@ -1,3 +1,16 @@
+// Profil ikonlarına tıklanınca link açılmazsa uyarı göster (event delegation)
+document.querySelector('.sidebar')?.addEventListener('click', function(e) {
+    const link = e.target.closest('.icon-link');
+    if (!link) return;
+    // Sadece mailto hariç dış linkler için kontrol
+    if (link.href.startsWith('mailto:')) return;
+    // 100ms sonra kontrol: yeni sekme açıldı mı?
+    setTimeout(function() {
+        if (document.hasFocus()) {
+            alert('Bağlantı açılmıyorsa, lütfen tarayıcı ayarlarınızı veya pop-up engelleyicinizi kontrol edin.');
+        }
+    }, 100);
+});
 console.log("Main.js çalışıyor!");
 
 // Dinamik olarak eklenen linkleri yakalamak için event delegation
