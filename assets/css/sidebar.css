@@ -20,13 +20,15 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    position: static;
+    position: sticky;
+    top: 0;
     width: 100%;
     height: auto;
     border-right: none;
     border-bottom: 2px solid rgba(255,255,255,0.1);
     box-shadow: 0 4px 20px rgba(0,0,0,0.10);
     padding: 1rem 0.5rem;
+    z-index: 100;
   }
   .profile {
     padding: 1rem 0.5rem;
