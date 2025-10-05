@@ -84,3 +84,16 @@
   }
 }
 
+/* --- yeni eklenen about paragrafı için stil --- */
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.75;       /* satır aralığını biraz açtık */
+  color: #fff;
+  text-align: justify;
+  padding: 1.5rem 2rem;    /* biraz daha ferah */
+  box-sizing: border-box;
+  letter-spacing: 0.3px;   /* harf aralığı */
+  font-weight: 300;        /* modern, hafif font */
+  
+}
+

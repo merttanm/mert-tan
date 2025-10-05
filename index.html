@@ -1,10 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mert Tan | Portfolio</title>
+    
+    <!-- SEO ADDED -->
+    <title>Mert Tan | Yazılım Geliştirici & Portfolio</title>
+    <meta name="description" content="Mert Tan — Yazılım geliştirici. Projeler, deneyimler, iletişim bilgileri ve portfolyo.">
+    <meta name="keywords" content="Mert Tan, Yazılım Geliştirici, Portfolio, Java, React, Web Developer">
+    <meta name="author" content="Mert Tan">
+    <link rel="canonical" href="https://merttanm.github.io/">
+
+    <!-- Google Search Console doğrulama (Search Console sana özel kod verecek, buraya yapıştır) -->
+    <!-- <meta name="google-site-verification" content="KODUNU_BURAYA_YAPIŞTIR"> -->
+
+    <!-- Sosyal medya önizlemeleri -->
+    <meta property="og:title" content="Mert Tan | Yazılım Geliştirici">
+    <meta property="og:description" content="Mert Tan — Yazılım geliştirici. Projeler ve iletişim bilgileri.">
+    <meta property="og:url" content="https://merttanm.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://merttanm.github.io/assets/img/profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Structured Data: Google'a 'bu bir kişi' de -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Mert Tan",
+      "url": "https://merttanm.github.io/",
+      "jobTitle": "Yazılım Geliştirici",
+      "sameAs": [
+        "https://github.com/merttanm",
+        "https://www.linkedin.com/in/merttanm"
+      ]
+    }
+    </script>
+    <!-- SEO ADDED END -->
+
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/layout.css">
     <link rel="stylesheet" href="assets/css/components.css">
@@ -14,14 +47,11 @@
 
 <body>
     <div class="layout">
-        <!-- Sidebar ve üstüne taşan kutucuklar -->
         <div class="sidebar-stack">
             <aside class="sidebar">
-                <nav class="nav" id="left-root">
-                    <!-- JS ile nav linkleri buraya gelecek -->
-                </nav>
+                <nav class="nav" id="left-root"></nav>
             </aside>
-            <!-- Sidebar'ın üstüne taşan kutucuklar -->
+        
             <div class="floating-sections">
                 <div id="about" class="component-section"></div>
                 <div id="projects" class="component-section"></div>
@@ -30,15 +60,12 @@
             </div>
         </div>
 
-        <!-- Sağ taraf scrollable ve JS ile yüklenecek -->
-        <main class="content" id="right-root">
-
-        </main>
+        <main class="content" id="right-root"></main>
     </div>
+
     <script src="js/loader.js"></script>
     <script src="js/main.js"></script>
     <script src="js/github-projects.js"></script>
     <script src="js/projects-carousel.js"></script>
 </body>
-
 </html>

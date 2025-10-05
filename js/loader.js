@@ -13,23 +13,39 @@ async function loadComponent(name, targetId) {
         if (!response.ok) throw new Error(`Component bulunamadı: ${name}`);
         const html = (await response.text()).trim();
 
-        // İçerik tamamen boşsa kutu ekleme
-        if (!html || html.replace(/<[^>]*>/g, '').trim() === '') {
+        // ...existing code...
+        // İçerik tamamen boşsa veya sadece boş etiket/boşluk varsa kutu ekleme
+        const visibleContent = html.replace(/<[^>]*>/g, '').replace(/\s|&nbsp;/g, '').trim();
+        if (!html || visibleContent === '') {
             console.log(`${name} componenti boş, eklenmedi.`);
             return;
         }
-
+        // ...existing code...
         // Her component kendi div içinde olacak şekilde ekleme
         let container = document.getElementById(name);
+
+        // Eğer hedef (targetId) bulunmuyorsa hata ver ve dur
+        const target = document.getElementById(targetId);
+        if (!target) {
+            console.error(`Target element bulunamadı: ${targetId}`);
+            return;
+        }
+
+        // Container yoksa oluştur, varsa var olanı kullan
         if (!container) {
             container = document.createElement('div');
             container.id = name;
-            container.classList.add('component-section'); // CSS için opsiyonel
-            document.getElementById(targetId).appendChild(container);
+        
+            target.appendChild(container);
+        } else {
+            console.log(`${name} div zaten var, tekrar oluşturulmadı.`);
         }
 
+        // HTML içeriğini bas
         container.innerHTML = html;
         console.log(`${name} yüklendi → ${targetId}`);
+
+
     } catch (err) {
         console.error(err);
     }
@@ -59,3 +75,6 @@ document.getElementById('left-root').addEventListener('click', e => {
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 });
+
+
+
