@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://merttanm.github.io/</loc>
+    <loc>https://merttanm.github.io/mert-tan/</loc>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://merttanm.github.io/about</loc>
+    <loc>https://merttanm.github.io/mert-tan/about</loc>
     <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://merttanm.github.io/mert-tan/projects</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://merttanm.github.io/mert-tan/experience</loc>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://merttanm.github.io/mert-tan/contact</loc>
+    <priority>0.70</priority>
   </url>
 </urlset>
